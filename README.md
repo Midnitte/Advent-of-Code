@@ -1,0 +1,2 @@
+# Advent of Code
+My solutions to the problems for each year of the [Advent of Code](https://adventofcode.com/2022/about) - a yearly problem solving challenge that awards stars for each portion of a problem solved.
