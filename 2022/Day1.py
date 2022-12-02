@@ -15,4 +15,4 @@ data['Sum'] = data.sum(axis=1, numeric_only=True)
 print(data['Sum'].nlargest(n=1))
 
 # Part 2
-
+print(sum(data['Sum'].nlargest(n=3)))
