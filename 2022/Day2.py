@@ -42,3 +42,38 @@ for index, row in data.iterrows():
             score = score + 3 + 3
 
 print(score)
+
+# Part 2
+
+# X - lose - 0
+# Y - draw - 3
+# Z - win - 6
+
+# A - Rock - (1)
+# B - Paper - (2)
+# C - Scissors - (3)
+score = 0
+for index, row in data.iterrows():
+    if row["0"] == 'A':  # Rock
+        if row["1"] == 'Y': 
+            score = score + 1 + 3
+        elif row['1'] == 'X': 
+            score = score + 3 + 0
+        else:
+            score = score + 2 + 6
+    elif row["0"] == 'B':  # Paper
+        if row["1"] == 'Y':
+            score = score + 2 + 3
+        elif row['1'] == 'X':
+            score = score + 1 + 0
+        else:
+            score = score + 3 + 6
+    else:  # Scissors
+        if row["1"] == 'Y':
+            score = score + 3 + 3
+        elif row['1'] == 'X': 
+            score = score + 2 + 0
+        else: 
+            score = score + 1 + 6
+
+print(score)
