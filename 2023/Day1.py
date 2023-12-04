@@ -31,7 +31,7 @@ new_results = []
 for line in data_list:
     new_results.append([match.group(1) for match in re.finditer(match_pat, line)])
 
-print(new_results)
+
 num_dict = {"one": "1","two": "2","three": "3", "four": "4", "five": "5",\
              "six": "6", "seven": "7", "eight": "8", "nine": "9"}
 converted_result = []
@@ -41,12 +41,8 @@ for index, result in enumerate(new_results):
         if num.isdigit():
             pass
         else:
-            result[idx] = num_dict[num]
+            new_results[index][idx] = num_dict[num]
     
+    converted_result.append(int(result[0] + result[-1]))
+print(f"Part Two Result: {sum(converted_result)}")
 
-
-
-
-    #converted_result.append(result[0] + result[-1])
-#print(new_results)
-#print(converted_result)
