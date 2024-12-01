@@ -16,7 +16,7 @@ for index, _ in enumerate(firstColumn):
     total += distanceCalc(firstColumn[index], secondColumn[index])
 
 
-print(total)
+print(f'Distance Total: {total}')
 
 # Part 2
 ## Similarity Scores
@@ -28,4 +28,4 @@ similarScore = 0
 for index, _ in enumerate(firstColumn):
     similarScore += simScore(firstColumn[index], secondColumn)
 
-print(similarScore)
+print(f'Similarity Score: {similarScore}')
